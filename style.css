@@ -1,0 +1,152 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 13px;
+	background-color: hsl(210, 46%, 95%);
+}
+h2 {
+	margin-bottom: 20px;
+}
+.container1,
+.container2,
+.container3,
+.container4,
+.container5 {
+	border-radius: 7px;
+	padding: 30px;
+}
+.containers {
+	display: grid;
+	width: 80%;
+	gap: 30px;
+	margin: 15px auto;
+	position: relative;
+	box-shadow: 0 3px 6px hsla(0,0, 0, 0.2);
+}
+.container1 .graduate,
+.container2 .graduate,
+.container5 .graduate {
+	color: hsl(0, 0%, 100%);
+	opacity: 0.5;
+}
+.container3 .graduate,
+.container4 .graduate {
+	color: hsl(217, 19%, 35%);
+	opacity: 0.5;
+}
+.container1 .review,
+.container2 .review,
+.container5 .review {
+	color: hsl(0, 0%, 81%);
+	opacity: 0.7;
+}
+
+.container3 .review,
+.container4 .review {
+	color: hsl(217, 19%, 35%);
+	opacity: 0.7;
+}
+.container1 {
+	background-color: hsl(263, 55%, 52%);
+	color: hsl(0, 0%, 100%);
+	position: relative;
+	z-index: -4;
+	grid-column: 1 / span 4;
+	grid-row: 1 / 2;
+}
+.container2 {
+	background-color: hsl(217, 19%, 35%);
+	color: hsl(0, 0%, 100%);
+	grid-column: 5 / span 1;
+	grid-row: 1 / 2;
+}
+.container3 {
+	background-color: hsl(0, 0%, 100%);
+	grid-column: 6 / span 1;
+	grid-row: 1 /span 2;
+}
+.container4 {
+	background-color: hsl(0, 0%, 100%) ;
+	grid-column: 1 / span 1;
+	grid-row: 2 / 3;
+}
+.container5 {
+	background-color: hsl(219, 29%, 14%);
+	color: hsl(0, 0%, 100%);
+	grid-column: 2 / span 4;
+	grid-row: 2 / 3;
+}
+.person-details {
+	display: flex;
+	margin-bottom: 20px;
+	align-items: center;
+	gap:  20px;
+}
+.images {
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+}
+.container5 .images {
+	border: 1px solid hsl(263, 55%, 52%);
+}
+.quote-image {
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 5px;
+	left: 300px;
+	z-index: -2;
+}
+.container1 .main-comment {
+	z-index: 1;
+	position: relative;
+} 
+.review {
+	line-height: 1.5;
+}
+.attribution { 
+	font-size: 11px; 
+	text-align: center; 
+}
+.attribution a { 
+	color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (max-width: 750px){
+	body {
+		/*width: 740px;*/
+	}
+	.containers {
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+	}
+	.container3 {
+		order: 5;
+	}
+	.quote-image {
+		left: 400px;
+	}
+}
+
+
+@media only screen and (max-width: 650px){
+	body {
+		width: 375px;
+	}
+	.containers {
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+	}
+	.container3 {
+		order: 5;
+	}
+	.quote-image {
+		left: 180px;
+	}
+}
